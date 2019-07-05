@@ -11,12 +11,14 @@ var template = (
     </ol>
   </div>
 );
-
+var userName = 'Andrew';
+var userAge = 31;
+var userLocation = 'San Diego, California';
 var templateTwo = (
   <div>
-    <h1>Andrew Thomsen</h1>
-    <p>Age: 31</p>
-    <p>Location: California</p>
+    <h1>{username.toUpperCase()}</h1>
+    <p>Age: {userAge}</p>
+    <p>Location: {userLocation}</p> 
   </div>
 );
 
