@@ -52,13 +52,14 @@ function getLocation(location) {
     );
   }
 }
+// Ternary operator practice
 var templateTwo = React.createElement(
   'div',
   null,
   React.createElement(
     'h1',
     null,
-    user.name
+    user.name ? user.name : 'anonymous'
   ),
   React.createElement(
     'p',
