@@ -1,40 +1,46 @@
-'use strict';
+"use strict";
 
-// arguments object - no longer bound with arrow functions
+console.log("App.js is running!");
 
-var add = function add(a, b) {
-  // console.log(arguments);
-  return a + b;
+var app = {
+  title: "Indecision App",
+  subtitle: "Template React App",
+  options: ["one", "two"]
 };
-console.log(add(55, 1, 1001));
+var template = React.createElement(
+  "div",
+  null,
+  React.createElement(
+    "h1",
+    null,
+    app.title
+  ),
+  app.subtitle && React.createElement(
+    "p",
+    null,
+    app.subtitle
+  ),
+  React.createElement(
+    "p",
+    null,
+    app.options.length > 0 ? "Here are your options" : "no options"
+  ),
+  React.createElement(
+    "ol",
+    null,
+    React.createElement(
+      "li",
+      null,
+      "Item one"
+    ),
+    React.createElement(
+      "li",
+      null,
+      "Item two"
+    )
+  )
+);
 
-// this keyword - no longer bound
-
-var user = {
-  name: 'Andrew',
-  cities: ['Philadelphia', 'New York', 'Dublin'],
-  printPlacesLived: function printPlacesLived() {
-    var _this = this;
-
-    return this.cities.map(function (city) {
-      return _this.name + ' has lived in ' + city;
-    });
-  }
-};
-console.log(user.printPlacesLived());
-
-// Challenge area
-
-var multiplier = {
-  numbers: [10, 20, 30],
-  multiplyBy: 3,
-  multiply: function multiply() {
-    var _this2 = this;
-
-    return this.numbers.map(function (number) {
-      return number * _this2.multiplyBy;
-    });
-  }
-};
-
-console.log(multiplier.multiply());
+var appRoot = document.getElementById("app");
+// Responsible for rendering template 1 or 2
+ReactDOM.render(template, appRoot);

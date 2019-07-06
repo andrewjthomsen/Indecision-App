@@ -16,26 +16,8 @@ const template = (
     </ol>
   </div>
 );
-const user = {
-  name: "Andrew",
-  age: 31,
-  location: "San Diego, California"
-};
 
-function getLocation(location) {
-  if (location) {
-    return <p>location: {location}</p>;
-  }
-}
-const templateTwo = (
-  <div>
-    <h1>{user.name ? user.name : "anonymous"}</h1>
-    {user.age && user.age >= 18 && <p>Age: {user.age}</p>}
-
-    {getLocation(user.location)}
-  </div>
-);
 
 const appRoot = document.getElementById("app");
 // Responsible for rendering template 1 or 2
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(template, appRoot);
