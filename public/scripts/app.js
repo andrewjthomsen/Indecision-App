@@ -41,7 +41,7 @@ var user = {
   age: 31,
   location: 'San Diego, California'
 };
-
+// If statement practice
 function getLocation(location) {
   if (location) {
     return location;
