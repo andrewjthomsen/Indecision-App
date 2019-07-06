@@ -41,6 +41,22 @@ var template = React.createElement(
   )
 );
 
+var count = 0;
+var templateTwo = React.createElement(
+  "div",
+  null,
+  React.createElement(
+    "h1",
+    null,
+    "count: ",
+    count
+  ),
+  React.createElement(
+    "button",
+    { id: "my_id", className: "button" },
+    "+1"
+  )
+);
 var appRoot = document.getElementById("app");
 // Responsible for rendering template 1 or 2
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);

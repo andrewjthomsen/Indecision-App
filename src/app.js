@@ -17,7 +17,13 @@ const template = (
   </div>
 );
 
-
+let count = 0;
+const templateTwo = (
+  <div>
+    <h1>count: {count}</h1>
+    <button id="my_id" className="button">+1</button>
+  </div>
+);
 const appRoot = document.getElementById("app");
 // Responsible for rendering template 1 or 2
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);
