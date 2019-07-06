@@ -2,14 +2,19 @@ console.log("App.js is running!");
 // If statements 
 // Ternary operators
 // Logical and operator
+
+// Only render the subtitle (and p tag) if subtitle exists - logical and operator
+// Render new p tag - if options.length > 0 m'here are your options 'no options'
+
 var app = {
   title: 'Indecision App',
-  subtitle: 'Template React App'
+  subtitle: 'Template React App',
+  options: ['one', 'two']
 };
 var template = (
   <div>
     <h1>{app.title}</h1>
-    <p>{app.subtitle}</p>
+    {app.subtitle && <p>{app.subtitle}</p>}
     <ol>
       <li>Item one</li>
       <li>Item two</li>
@@ -32,7 +37,7 @@ function getLocation(location) {
 var templateTwo = (
   <div>
     <h1>{user.name ? user.name : 'anonymous'}</h1>
-   {user.age >= 18 &&  <p>Age: {user.age}</p>}
+   {(user.age && user.age >= 18) &&  <p>Age: {user.age}</p>}
   
     {getLocation(user.location)}
   </div>

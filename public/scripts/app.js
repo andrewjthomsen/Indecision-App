@@ -4,9 +4,14 @@ console.log("App.js is running!");
 // If statements 
 // Ternary operators
 // Logical and operator
+
+// Only render the subtitle (and p tag) if subtitle exists - logical and operator
+// Render new p tag - if options.length > 0 m'here are your options 'no options'
+
 var app = {
   title: 'Indecision App',
-  subtitle: 'Template React App'
+  subtitle: 'Template React App',
+  options: ['one', 'two']
 };
 var template = React.createElement(
   'div',
@@ -16,7 +21,7 @@ var template = React.createElement(
     null,
     app.title
   ),
-  React.createElement(
+  app.subtitle && React.createElement(
     'p',
     null,
     app.subtitle
@@ -62,7 +67,7 @@ var templateTwo = React.createElement(
     null,
     user.name ? user.name : 'anonymous'
   ),
-  user.age >= 18 && React.createElement(
+  user.age && user.age >= 18 && React.createElement(
     'p',
     null,
     'Age: ',
