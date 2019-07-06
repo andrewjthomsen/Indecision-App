@@ -21,14 +21,22 @@ var user = {
   age: 31,
   location: 'San Diego, California'
 };
+
+function getLocation(location) {
+ if(location) {
+   return location;
+ } else {
+   return 'unknown';
+ }
+}
 var templateTwo = (
   <div>
     <h1>{user.name}</h1>
     <p>Age: {user.age}</p>
-    <p>Location: {user.location}</p> 
+    <p>Location: {getLocation(user.location)}</p> 
   </div>
 );
 
 var appRoot = document.getElementById("app");
-
+// Responsible for rendering template 1 or 2
 ReactDOM.render(templateTwo, appRoot);

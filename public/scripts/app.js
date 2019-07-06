@@ -41,6 +41,14 @@ var user = {
   age: 31,
   location: 'San Diego, California'
 };
+
+function getLocation(location) {
+  if (location) {
+    return location;
+  } else {
+    return 'unknown';
+  }
+}
 var templateTwo = React.createElement(
   'div',
   null,
@@ -59,10 +67,10 @@ var templateTwo = React.createElement(
     'p',
     null,
     'Location: ',
-    user.location
+    getLocation(user.location)
   )
 );
 
 var appRoot = document.getElementById("app");
-
+// Responsible for rendering template 1 or 2
 ReactDOM.render(templateTwo, appRoot);
