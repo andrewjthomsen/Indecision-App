@@ -28,10 +28,11 @@ function getLocation(location) {
  } 
 }
 // Ternary operator practice
+// Logical and operator practice
 var templateTwo = (
   <div>
     <h1>{user.name ? user.name : 'anonymous'}</h1>
-    <p>Age: {user.age}</p>
+   {user.age >= 18 &&  <p>Age: {user.age}</p>}
   
     {getLocation(user.location)}
   </div>

@@ -53,6 +53,7 @@ function getLocation(location) {
   }
 }
 // Ternary operator practice
+// Logical and operator practice
 var templateTwo = React.createElement(
   'div',
   null,
@@ -61,7 +62,7 @@ var templateTwo = React.createElement(
     null,
     user.name ? user.name : 'anonymous'
   ),
-  React.createElement(
+  user.age >= 18 && React.createElement(
     'p',
     null,
     'Age: ',
