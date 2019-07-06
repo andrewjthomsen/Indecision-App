@@ -44,9 +44,12 @@ var user = {
 // If statement practice
 function getLocation(location) {
   if (location) {
-    return location;
-  } else {
-    return 'unknown';
+    return React.createElement(
+      'p',
+      null,
+      'location: ',
+      location
+    );
   }
 }
 var templateTwo = React.createElement(
@@ -63,12 +66,7 @@ var templateTwo = React.createElement(
     'Age: ',
     user.age
   ),
-  React.createElement(
-    'p',
-    null,
-    'Location: ',
-    getLocation(user.location)
-  )
+  getLocation(user.location)
 );
 
 var appRoot = document.getElementById("app");
