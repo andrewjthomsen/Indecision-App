@@ -8,8 +8,7 @@ console.log("App.js is running!");
 
 var app = {
   title: 'Indecision App',
-  subtitle: 'Template React App',
-  options: ['one', 'two']
+  options: []
 };
 var template = (
   <div>
