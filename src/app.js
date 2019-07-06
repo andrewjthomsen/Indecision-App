@@ -1,8 +1,7 @@
 console.log("App.js is running!");
-
-// Create app object title/subtitle
-// Use title/ subtitle in template
-// Render template
+// If statements 
+// Ternary operators
+// Logical and operator
 var app = {
   title: 'Indecision App',
   subtitle: 'Template React App'
