@@ -20,10 +20,12 @@ const template = (
 let count = 0;
 // ADD ONE
 const addOne = () => {
-  console.log("addOne");
+  count ++;
+  console.log("addOne", count);
 };
 // SUBTRACT ONE
 const minusOne = () => {
+  count = count -1;
   console.log("minusOne");
 };
 // RESET

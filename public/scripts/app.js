@@ -44,10 +44,12 @@ var template = React.createElement(
 var count = 0;
 // ADD ONE
 var addOne = function addOne() {
-  console.log("addOne");
+  count++;
+  console.log("addOne", count);
 };
 // SUBTRACT ONE
 var minusOne = function minusOne() {
+  count = count - 1;
   console.log("minusOne");
 };
 // RESET
