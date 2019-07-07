@@ -40,10 +40,19 @@ var template = React.createElement(
     )
   )
 );
-// REACT DOM 
+
 var count = 0;
+// ADD ONE
 var addOne = function addOne() {
-  console.log('addOne');
+  console.log("addOne");
+};
+// SUBTRACT ONE
+var minusOne = function minusOne() {
+  console.log("minusOne");
+};
+// RESET
+var reset = function reset() {
+  console.log("reset");
 };
 var templateTwo = React.createElement(
   "div",
@@ -58,9 +67,27 @@ var templateTwo = React.createElement(
     "button",
     { onClick: addOne },
     "+1"
+  ),
+  React.createElement(
+    "button",
+    { onClick: minusOne },
+    "-1"
+  ),
+  React.createElement(
+    "button",
+    { onClick: reset },
+    "RESET"
   )
 );
-console.log("templateTwo", templateTwo);
+
+// Challenge
+// Make button with text -1 and will modify count. 
+// For now just console.log("minusOne")
+// Setup minus one function and register it as onClick handler
+// Reset button- text value of reset
+// Define function that fires every time button is clicked
+// Log reset everytime buton is clicked
+
 var appRoot = document.getElementById("app");
 // Responsible for rendering template 1 or 2
 ReactDOM.render(templateTwo, appRoot);
