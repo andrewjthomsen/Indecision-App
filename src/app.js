@@ -39,14 +39,6 @@ const templateTwo = (
   </div>
 );
 
-// Challenge
-// Make button with text -1 and will modify count. 
-// For now just console.log("minusOne")
-// Setup minus one function and register it as onClick handler
-// Reset button- text value of reset
-// Define function that fires every time button is clicked
-// Log reset everytime buton is clicked
-
 const appRoot = document.getElementById("app");
 // Responsible for rendering template 1 or 2
 ReactDOM.render(templateTwo, appRoot);
