@@ -56,32 +56,36 @@ var minusOne = function minusOne() {
 var reset = function reset() {
   console.log("reset");
 };
-var templateTwo = React.createElement(
-  "div",
-  null,
-  React.createElement(
-    "h1",
-    null,
-    "Count: ",
-    count
-  ),
-  React.createElement(
-    "button",
-    { onClick: addOne },
-    "+1"
-  ),
-  React.createElement(
-    "button",
-    { onClick: minusOne },
-    "-1"
-  ),
-  React.createElement(
-    "button",
-    { onClick: reset },
-    "RESET"
-  )
-);
 
 var appRoot = document.getElementById("app");
-// Responsible for rendering template 1 or 2
-ReactDOM.render(templateTwo, appRoot);
+
+renderCounterApp = function renderCounterApp() {
+  // JSX doesn't have built in data binding
+  var templateTwo = React.createElement(
+    "div",
+    null,
+    React.createElement(
+      "h1",
+      null,
+      "Count: ",
+      count
+    ),
+    React.createElement(
+      "button",
+      { onClick: addOne },
+      "+1"
+    ),
+    React.createElement(
+      "button",
+      { onClick: minusOne },
+      "-1"
+    ),
+    React.createElement(
+      "button",
+      { onClick: reset },
+      "RESET"
+    )
+  );
+  // Responsible for rendering template 1 or 2
+  ReactDOM.render(templateTwo, appRoot);
+};

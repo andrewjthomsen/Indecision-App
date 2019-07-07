@@ -20,27 +20,31 @@ const template = (
 let count = 0;
 // ADD ONE
 const addOne = () => {
-  count ++;
+  count++;
   console.log("addOne", count);
 };
 // SUBTRACT ONE
 const minusOne = () => {
-  count = count -1;
+  count = count - 1;
   console.log("minusOne");
 };
 // RESET
 const reset = () => {
   console.log("reset");
 };
-const templateTwo = (
-  <div>
-    <h1>Count: {count}</h1>
-    <button onClick={addOne}>+1</button>
-    <button onClick={minusOne}>-1</button>
-    <button onClick={reset}>RESET</button>
-  </div>
-);
 
 const appRoot = document.getElementById("app");
+
+renderCounterApp = () => {
+  // JSX doesn't have built in data binding
+  const templateTwo = (
+    <div>
+      <h1>Count: {count}</h1>
+      <button onClick={addOne}>+1</button>
+      <button onClick={minusOne}>-1</button>
+      <button onClick={reset}>RESET</button>
+    </div>
+  );
 // Responsible for rendering template 1 or 2
 ReactDOM.render(templateTwo, appRoot);
+};
