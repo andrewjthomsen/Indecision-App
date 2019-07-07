@@ -18,11 +18,13 @@ const template = (
 );
 // REACT DOM 
 let count = 0;
-const btnID = 'my_id';
+const addOne = () => {
+  console.log('addOne');
+};
 const templateTwo = (
   <div>
     <h1>Count: {count}</h1>
-    <button id={btnID} className="button">
+    <button onClick={addOne}>
       +1
     </button>
   </div>

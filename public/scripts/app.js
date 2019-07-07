@@ -42,7 +42,9 @@ var template = React.createElement(
 );
 // REACT DOM 
 var count = 0;
-var btnID = 'my_id';
+var addOne = function addOne() {
+  console.log('addOne');
+};
 var templateTwo = React.createElement(
   "div",
   null,
@@ -54,7 +56,7 @@ var templateTwo = React.createElement(
   ),
   React.createElement(
     "button",
-    { id: btnID, className: "button" },
+    { onClick: addOne },
     "+1"
   )
 );
