@@ -16,12 +16,15 @@ const template = (
     </ol>
   </div>
 );
-
+// REACT DOM 
 let count = 0;
+const btnID = 'my_id';
 const templateTwo = (
   <div>
     <h1>Count: {count}</h1>
-    <button id="my_id" className="button">+1</button>
+    <button id={btnID} className="button">
+      +1
+    </button>
   </div>
 );
 console.log("templateTwo", templateTwo);
