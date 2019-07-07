@@ -20,10 +20,11 @@ const template = (
 let count = 0;
 const templateTwo = (
   <div>
-    <h1>count: {count}</h1>
+    <h1>Count: {count}</h1>
     <button id="my_id" className="button">+1</button>
   </div>
 );
+console.log("templateTwo", templateTwo);
 const appRoot = document.getElementById("app");
 // Responsible for rendering template 1 or 2
 ReactDOM.render(templateTwo, appRoot);

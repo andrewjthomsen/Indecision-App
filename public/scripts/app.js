@@ -48,7 +48,7 @@ var templateTwo = React.createElement(
   React.createElement(
     "h1",
     null,
-    "count: ",
+    "Count: ",
     count
   ),
   React.createElement(
@@ -57,6 +57,7 @@ var templateTwo = React.createElement(
     "+1"
   )
 );
+console.log("templateTwo", templateTwo);
 var appRoot = document.getElementById("app");
 // Responsible for rendering template 1 or 2
 ReactDOM.render(templateTwo, appRoot);
