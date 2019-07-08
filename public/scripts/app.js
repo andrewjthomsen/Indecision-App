@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
-console.log('App.js is running!');
+console.log("App.js is running!");
 
 var app = {
-  title: 'Indecision App',
-  subtitle: 'Put your life in the hands of a computer',
+  title: "Indecision App",
+  subtitle: "Put your life in the hands of a computer",
   options: []
 };
 
@@ -15,7 +15,7 @@ var onFormSubmit = function onFormSubmit(e) {
 
   if (option) {
     app.options.push(option);
-    e.target.elements.option.value = '';
+    e.target.elements.option.value = "";
     render();
   }
 };
@@ -25,72 +25,66 @@ var onRemoveAll = function onRemoveAll() {
   render();
 };
 
-var appRoot = document.getElementById('app');
+var appRoot = document.getElementById("app");
+
+var numbers = [55, 101, 1000];
 
 var render = function render() {
   var template = React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-      'h1',
+      "h1",
       null,
       app.title
     ),
     app.subtitle && React.createElement(
-      'p',
+      "p",
       null,
       app.subtitle
     ),
     React.createElement(
-      'p',
+      "p",
       null,
-      app.options.length > 0 ? 'Here are your options' : 'No options'
+      app.options.length > 0 ? "Here are your options" : "No options"
     ),
     React.createElement(
-      'p',
+      "p",
       null,
       app.options.length
     ),
     React.createElement(
-      'button',
+      "button",
       { onClick: onRemoveAll },
-      'Remove All'
+      "Remove All"
     ),
-    [React.createElement(
-      'p',
-      { key: '1' },
-      'a'
-    ), React.createElement(
-      'p',
-      { key: '2' },
-      'b'
-    ), React.createElement(
-      'p',
-      { key: '3' },
-      'c'
-    )],
+    numbers.map(function (number) {
+      return React.createElement(
+        "p",
+        { key: number },
+        "Number: ",
+        number
+      );
+    }),
     React.createElement(
-      'ol',
+      "ol",
       null,
-      React.createElement(
-        'li',
-        null,
-        'Item one'
-      ),
-      React.createElement(
-        'li',
-        null,
-        'Item two'
-      )
+      app.options.map(function (option) {
+        return React.createElement(
+          "li",
+          { key: option },
+          option
+        );
+      })
     ),
     React.createElement(
-      'form',
+      "form",
       { onSubmit: onFormSubmit },
-      React.createElement('input', { type: 'text', name: 'option' }),
+      React.createElement("input", { type: "text", name: "option" }),
       React.createElement(
-        'button',
+        "button",
         null,
-        'Add Option'
+        "Add Option"
       )
     )
   );
