@@ -56,6 +56,7 @@ var render = function render() {
       { onClick: onRemoveAll },
       'Remove All'
     ),
+    [99, 98, 97, "Mike Smith", null, undefined, true],
     React.createElement(
       'ol',
       null,
