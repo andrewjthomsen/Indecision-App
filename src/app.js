@@ -34,8 +34,9 @@ const render = () => {
       <p>{app.options.length}</p>
       <button onClick={onRemoveAll}>Remove All</button>
       {
-        [99, 98, 97, "Mike Smith", null, undefined, true]
+        [<p key="1">a</p>, <p key="2">b</p>, <p key="3">c</p>]
       }
+
       <ol>
         <li>Item one</li>
         <li>Item two</li>
