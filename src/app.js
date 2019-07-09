@@ -40,7 +40,7 @@ const render = () => {
       {app.subtitle && <p>{app.subtitle}</p>}
       <p>{app.options.length > 0 ? "Here are your options" : "No options"}</p>
      
-      <button onClick={onMakeDecision}>What Should I Do?</button>
+      <button disabled={app.options.length === 0} onClick={onMakeDecision}>What Should I Do?</button>
       <button onClick={onRemoveAll}>Remove All</button>
       {numbers.map(number => {
         return <p key={number}>Number: {number}</p>;
