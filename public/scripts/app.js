@@ -26,8 +26,9 @@ var onRemoveAll = function onRemoveAll() {
 };
 
 var onMakeDecision = function onMakeDecision() {
-  var randomNum = Math.random() * app.options.length;
-  console.log(randomNum);
+  var randomNum = Math.floor(Math.random() * app.options.length);
+  var option = app.options[randomNum];
+  alert(option);
 };
 
 var appRoot = document.getElementById("app");
