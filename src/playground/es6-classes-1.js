@@ -1,24 +1,26 @@
-// Classes are like blue prints
-
-// Setup constructor to take name and age (default to 0)
-// getDescription - Andrew Thomsen is 31 years old.
-
 class Person {
-    constructor(name = 'Anonymous', age = 0) {
-        this.name = name;
-        this.age = age;
-    }
-    getGreeting() {
-        // return 'Hi. I am ' + this.name + '!';
-        return `Hi. I am ${ this.name}!`;
-    }
-    getDescription() {
-        return `${this.name} is ${this.age} year(s) old.`;
-    }
+  constructor(name = "Anonymous", age = 0) {
+    this.name = name;
+    this.age = age;
+  }
+  getGreeting() {
+    // return 'Hi. I am ' + this.name + '!';
+    return `Hi. I am ${this.name}!`;
+  }
+  getDescription() {
+    return `${this.name} is ${this.age} year(s) old.`;
+  }
 }
 
-const me = new Person('Andrew Thomsen', 26);
-console.log(me.getDescription()); 
+class Student extends Person {
+  constructor(name, age, major) {
+      super(name, age);
+      this.major = major;
+  }
+}
 
-const other = new Person();
-console.log(other.getDescription());
+const me = new Student("Andrew Thomsen", 26, "Web Development");
+console.log(me.getDescription());
+
+const other = new Student();
+console.log(other);
