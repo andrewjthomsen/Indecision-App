@@ -174,7 +174,7 @@ var AddOption = function (_React$Component6) {
     value: function handleAddOption(e) {
       event.preventDefault();
 
-      var option = event.target.elements.option.value;
+      var option = event.target.elements.option.value.trim();
       if (option) {
         alert(option);
       }
