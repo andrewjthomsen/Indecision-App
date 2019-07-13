@@ -1,8 +1,8 @@
 class IndecisionApp extends React.Component {
   render() {
-    const title = 'Indecision';
-    const subtitle = 'Put your life in the hands of a computer';
-    const options = ['Thing one', 'Thing two', 'Thing four'];
+    const title = "Indecision";
+    const subtitle = "Put your life in the hands of a computer";
+    const options = ["Thing one", "Thing two", "Thing four"];
 
     return (
       <div>
@@ -27,22 +27,29 @@ class Header extends React.Component {
 }
 
 class Action extends React.Component {
+  handlePick() {
+    alert("handlePick");
+  }
   render() {
     return (
       <div>
-        <button>What should I do?</button>
+        <button onClick={this.handlePick}>What should I do?</button>
       </div>
     );
   }
 }
 
 class Options extends React.Component {
+  handleRemoveAll() {
+    alert('handleRemoveAll');
+  }
   render() {
     return (
       <div>
-        {
-          this.props.options.map((option) => <Option key={option} optionText={option} />)
-        }
+      <button onClick={this.handleRemoveAll}>Remove All</button>
+        {this.props.options.map(option => (
+          <Option key={option} optionText={option} />
+        ))}
       </div>
     );
   }
@@ -50,22 +57,14 @@ class Options extends React.Component {
 
 class Option extends React.Component {
   render() {
-    return (
-      <div>
-        {this.props.optionText}
-      </div>
-    );
+    return <div>{this.props.optionText}</div>;
   }
 }
 
 class AddOption extends React.Component {
   render() {
-    return (
-      <div>
-        AddOption component here
-      </div>
-    );
+    return <div>AddOption component here</div>;
   }
 }
 
-ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
+ReactDOM.render(<IndecisionApp />, document.getElementById("app"));

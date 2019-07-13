@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -18,14 +18,14 @@ var IndecisionApp = function (_React$Component) {
   }
 
   _createClass(IndecisionApp, [{
-    key: 'render',
+    key: "render",
     value: function render() {
-      var title = 'Indecision';
-      var subtitle = 'Put your life in the hands of a computer';
-      var options = ['Thing one', 'Thing two', 'Thing four'];
+      var title = "Indecision";
+      var subtitle = "Put your life in the hands of a computer";
+      var options = ["Thing one", "Thing two", "Thing four"];
 
       return React.createElement(
-        'div',
+        "div",
         null,
         React.createElement(Header, { title: title, subtitle: subtitle }),
         React.createElement(Action, null),
@@ -48,18 +48,18 @@ var Header = function (_React$Component2) {
   }
 
   _createClass(Header, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return React.createElement(
-        'div',
+        "div",
         null,
         React.createElement(
-          'h1',
+          "h1",
           null,
           this.props.title
         ),
         React.createElement(
-          'h2',
+          "h2",
           null,
           this.props.subtitle
         )
@@ -80,15 +80,20 @@ var Action = function (_React$Component3) {
   }
 
   _createClass(Action, [{
-    key: 'render',
+    key: "handlePick",
+    value: function handlePick() {
+      alert("handlePick");
+    }
+  }, {
+    key: "render",
     value: function render() {
       return React.createElement(
-        'div',
+        "div",
         null,
         React.createElement(
-          'button',
-          null,
-          'What should I do?'
+          "button",
+          { onClick: this.handlePick },
+          "What should I do?"
         )
       );
     }
@@ -107,11 +112,21 @@ var Options = function (_React$Component4) {
   }
 
   _createClass(Options, [{
-    key: 'render',
+    key: "handleRemoveAll",
+    value: function handleRemoveAll() {
+      alert('handleRemoveAll');
+    }
+  }, {
+    key: "render",
     value: function render() {
       return React.createElement(
-        'div',
+        "div",
         null,
+        React.createElement(
+          "button",
+          { onClick: this.handleRemoveAll },
+          "Remove All"
+        ),
         this.props.options.map(function (option) {
           return React.createElement(Option, { key: option, optionText: option });
         })
@@ -132,10 +147,10 @@ var Option = function (_React$Component5) {
   }
 
   _createClass(Option, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return React.createElement(
-        'div',
+        "div",
         null,
         this.props.optionText
       );
@@ -155,12 +170,12 @@ var AddOption = function (_React$Component6) {
   }
 
   _createClass(AddOption, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return React.createElement(
-        'div',
+        "div",
         null,
-        'AddOption component here'
+        "AddOption component here"
       );
     }
   }]);
@@ -168,4 +183,4 @@ var AddOption = function (_React$Component6) {
   return AddOption;
 }(React.Component);
 
-ReactDOM.render(React.createElement(IndecisionApp, null), document.getElementById('app'));
+ReactDOM.render(React.createElement(IndecisionApp, null), document.getElementById("app"));
