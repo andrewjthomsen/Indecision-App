@@ -114,7 +114,8 @@ var Options = function (_React$Component4) {
   _createClass(Options, [{
     key: "handleRemoveAll",
     value: function handleRemoveAll() {
-      alert("handleRemoveAll");
+      console.log(this.props.options);
+      // alert("handleRemoveAll");
     }
   }, {
     key: "render",
